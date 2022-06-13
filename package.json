@@ -20,5 +20,5 @@
   "devDependencies": {
     "https-proxy-agent": "^5.0.1"
   },
-  "description": ""
+  "description": "WebIF"
 }
