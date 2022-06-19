@@ -1,0 +1,61 @@
+html,
+body {
+      /* background: #c8e4c9; */
+   margin: 0;
+   padding: 0;
+   height: 80%;
+ }
+canvas {
+  flex-shrink: 0;
+  background-color: #222;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  object-fit: contain;
+}
+/* заголовок */
+.header
+{
+  width: 500px;
+  height: 20px;
+  position: top;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; 
+}
+
+.main-content {
+       /*Таблиця?  */
+      margin-top: 10px;
+      margin-left: 150px;
+      margin-right: 150px;
+      margin-bottom: 10px;
+}
+/* форма редагування */
+.form-group
+{
+          margin-top: 15px;
+          margin-left: 250px;
+          margin-right: 250px;
+}
+/* Кнопки зберегти скинути */
+.panel-body
+{
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+/* .table table-condensed table-striped table-bordered
+{
+  background: #7e68a1;
+  margin-top: 50px;
+  margin-bottom: 50px;
+} */
+/* анімація */
+.animation{
+  opacity: 0.1;
+    margin: -0px;
+
+}
