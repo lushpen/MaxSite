@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+    window.requestAnimFrame = (function () {
+      return (
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (callback) {
+          window.setTimeout(callback);
+        }
+      );
+    });
+
+    function init(elemid) {
+      let canvas = document.getElementById(elemid),
+        c = canvas.getContext("2d"),
+        w = (canvas.width = window.innerWidth),
+        h = (canvas.height = window.innerHeight);
+      c.fillStyle = "rgba(30,30,30,1)";
+      c.fillRect(0, 0, w, h);
+      return { c: c, canvas: canvas };
+    }
+  </script>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <!-- <script type="text/javascript" src="script.js"></script> -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Наші найкращі гравці</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
 <body>
+  <!-- partial:index.partial.html -->
+  <canvas id="canvas"></canvas>
+  <!-- partial -->
+  <script src="./script.js"></script>
   <div id="content" class="header">
     <h2><strong>ТОП-7 наших найкращих гравців</strong></h2>
   </div>
@@ -28,7 +58,7 @@
     </form>
     <table class="table table-condensed table-striped table-bordered">
         <!-- <thead><tr><th>Id</th><th>Ім'я</th><th>ChatID</th><th>Score</th><th></th></tr></thead> -->
-        <thead><tr><th>Ім'я</th><th>ChatID</th><th>Результат</th></tr></thead>
+        <thead><tr><th>Ім'я</th><th>ChatID</th><th>Результат</th><th>#</th></tr></thead>
         <tbody>
         </tbody>
     </table>
@@ -196,7 +226,7 @@
         // отримання користувачів
         GetUsers();
 </script>
-<div class="animation">
+<!-- <div class="animation">
       <script>
 // UTIL
 const PI = Math.PI,
@@ -469,7 +499,7 @@ let frame = 0;
 ctx.strokeStyle = "white";
 
 function loop() {
-  ctx.fillStyle="black";
+  ctx.fillStyle= "green";
   ctx.globalCompositeOperation = "source-over";
   ctx.globalAlpha = 0.2;
   ctx.fillRect(0, 0, W, H);
@@ -488,7 +518,7 @@ ctx.lineCap = "round";
 ctx.lineJoin = "round";
 
 loop();
-    </script>
+    </script> -->
   </div>
 </body>
 </html>
