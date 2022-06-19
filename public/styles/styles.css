@@ -15,7 +15,8 @@ body {
 } */
 /* заголовок */
 .header
-{background: #7e68a1;
+{
+  /* background: #7e68a1; */
   width: 80;
   height: 80;
   position: top;
